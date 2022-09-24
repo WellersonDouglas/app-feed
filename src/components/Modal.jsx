@@ -2,12 +2,9 @@ import { X } from 'phosphor-react'
 
 import styles from './Modal.module.css'
 
-export function Modal({ open, onClose, content, onDeleteComment}) {
+export function Modal({ open, onClose}) {
   if (!open) return null
-  
-  function handleDeleteComment() {
-    onDeleteComment(content);
-  }
+
 
   return (
     <div className={styles.overlay}>
@@ -26,7 +23,12 @@ export function Modal({ open, onClose, content, onDeleteComment}) {
         </div>
         <div className={styles.modalBtn}>
           <button onClick={onClose}>Cancelar</button>
-          <button onClick={handleDeleteComment}>Sim, excluir</button>
+          <button
+            // onClick={handleDeleteComment}
+            
+          >
+            Sim, excluir 
+          </button>
         </div>
       </div>
     </div>
